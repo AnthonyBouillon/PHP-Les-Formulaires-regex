@@ -1,0 +1,24 @@
+            h1{
+                text-align: center;
+            }
+            .inputForm {
+                display:inline-block;
+                width: 160px; 
+            }
+            input{
+                width: 350px;
+                margin-bottom: 20px;
+                display: inline-block;
+            }
+            fieldset{
+                width: 650px;
+            }
+            .submit{
+                margin-left: 168px;
+            }
+            .pError{
+                margin-left: 160px;   
+                color: red;
+                margin-top: -15px;
+                margin-bottom: 20px;
+            }

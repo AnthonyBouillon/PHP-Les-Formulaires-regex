@@ -1,0 +1,32 @@
+            h1{
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            form{
+                margin-left: 600px;
+            }
+            .pForm{
+                text-align: center;
+            }
+            /* Champ du formulaire */
+            input{
+                width: 350px;
+                margin-bottom: 20px;
+                display: inline-block;
+            }
+            /* Largeur des labels + alignement (mauvais nom de classe)*/
+            .inputForm {
+                display:inline-block;
+                width: 190px; 
+            }
+            /* La largeur des bordures du formulaire */
+            fieldset{
+                width: 650px;
+            }
+            /* Les étoiles rouge du formulaires (champ obligatoire) */
+            .star{
+                color: red;
+            }
+            .linkTp{
+                text-align: center;
+            }
