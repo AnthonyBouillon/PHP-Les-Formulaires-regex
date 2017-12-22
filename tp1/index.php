@@ -8,7 +8,7 @@
     <body>
             <?php
                 // Masquer les erreurs.
-                ini_set("display_errors",0);error_reporting(0);
+                error_reporting(0);
             ?>
          <!-- Regex pour chaque champs assigné à une variable -->
             <?php
