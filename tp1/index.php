@@ -3,14 +3,14 @@
     <head>
         <meta charset="utf-8"/>
          <link rel="stylesheet" href="style.css"> 
-        <title>Formulaire pour futur aprenant</title>
+        <title>Formulaire pour les futur aprenants</title>
     </head>
     <body>
             <?php
                 // Masquer les erreurs.
                 ini_set("display_errors",0);error_reporting(0);
             ?>
-         <!-- Regex + la saisie assigné à une variable  -->
+         <!-- Regex pour chaque champs assigné à une variable -->
             <?php
             $name = preg_match('#[A-Z]#', $_POST['name']);
             $firstName = preg_match('#[a-z]#', $_POST['firstName']);

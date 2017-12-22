@@ -8,7 +8,7 @@
     <body>
         <?php
                 // Masquer les erreurs dans le select.
-                ini_set("display_errors",0);error_reporting(0);
+                error_reporting(0);
             ?>
         <!-- Les regex assigné aux variables. (majuscule, masjuscule + minuscule + nombres + limitation caractères, nombres, maj + min + accent + tiret.)
         <?php
