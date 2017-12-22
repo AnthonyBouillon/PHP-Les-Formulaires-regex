@@ -6,14 +6,18 @@
         <title>Formulaire TP2</title>
     </head>
     <body>
+        <?php
+                // Masquer les erreurs dans le select.
+                ini_set("display_errors",0);error_reporting(0);
+            ?>
         <!-- Les regex assigné aux variables. (majuscule, masjuscule + minuscule + nombres + limitation caractères, nombres, maj + min + accent + tiret.)
         <?php
             /* Seuls les majuscules sont autorisés */
             $name = preg_match('#[A-Z]#', $_POST['name']);
-            /* Seuls les majuscules, minuscule, nombres, tiret sont autorisés et sont limité à 16 caractères */
-            $firstName = preg_match('#[a-zA-Z0-9_-]{3,16}#', $_POST['firstName']);
+            /* Seuls les majuscules, minuscule, nombres, tiret sont autorisés et sont limité à 36 caractères */
+            $firstName = preg_match('#[a-zA-Z0-9_-]{3,36}$#', $_POST['firstName']);
             /* Seuls les nombres sont autorisés, limité de 3 à 10 */
-            $age = preg_match('#[0-9]$#', $_POST['age']);
+            $age = preg_match('#[0-9]{2,3}$#', $_POST['age']);
             /* Seuls les majuscules, minuscules, nombres et tiret sont autorisés */
             $community = preg_match('#[a-zA-Z0-9-éè _-]#', $_POST['community']);
             /* Si le champ est saisie et que le format est correct : Valide le formulaire */
@@ -27,9 +31,9 @@
                 <label for="citizen">Civilité : </label>
                 <select id="citizen" name="citizen">
                     <!-- Si la valeur de l'option est égale a ce qui a était selectionné alors dit se qui a était sélectionné. -->
-                    <option value="Monsieur" <?php if('Monsieur'==$_POST['citizen']){echo("selected");}?>>Monsieur</option>
-                    <option value="Madame" <?php if('Madame'==$_POST['citizen']){echo("selected");}?>>Madame</option>
-                    <option value="Amaphrodite" <?php if('Amaphrodite'==$_POST['citizen']){echo("selected");}?>>Amaphrodite</option>
+                    <option value="Monsieur" <?php if('Monsieur'== $_POST['citizen']){echo("selected");}?>>Monsieur</option>
+                    <option value="Madame" <?php if('Madame'== $_POST['citizen']){echo("selected");}?>>Madame</option>
+                    <option value="Amaphrodite" <?php if('Amaphrodite'== $_POST['citizen']){echo("selected");}?>>Amaphrodite</option>
                 </select><br/><br/>
                 <!-- Ajouter des values  avec le echo $_POST['?'] pour que les données saisies reste affichés après la validation -->
                 <label for="name" class="inputForm">Nom : </label><input type="text" name="name" placeholder="Saisissez votre nom" id="name" value="<?php if (!empty($_POST['name'])){echo $_POST['name'];} ?>" required/><br/>
